@@ -20,17 +20,17 @@
 <!-- 下面是選項的語法 -->
 <div class="wrap  fadeInUp" id="sec1">
 	<div class="content-left">
-		<input type="radio" name="option" value="跑步" checked>跑步<br>
-		<input type="radio" name="option" value="鐵軌">鐵軌<br>
-		<input type="radio" name="option" value="山巔">山巔<br>
+		<input type="radio" name="option" value="海邊" checked>海邊<br>
+		<input type="radio" name="option" value="榕園">榕園<br>
+		<input type="radio" name="option" value="台大體育館">台大體育館<br>
 		<select name="test" class="opts" id="myselect">
-		  <option selected value=1>舒宇宸</option>
-		  <option value=2>劉之中</option>
-		  <option value=3>李昱勳</option>
+		  <option selected value=1>Bii畢書盡</option>
+		  <option value=2>ㄇㄚˊ幾兔</option>
+		  <option value=3>史迪奇</option>
 		</select>
-		名言一:<input id="quote_input1" value="數學建模教育之道無它, 唯數學與榜樣"> <br>
-		名言二:<input id="quote_input2" value="Mathematical Modeling is nothing, but Mathematics and Model!"> <br>
-		名言三:<input id="quote_input3" value="舒大ㄅ土, me"> <br>
+		名言一:<input id="quote_input1" value="努力做好每一件事"> <br>
+		名言二:<input id="quote_input2" value="上天不會給你過不了的考驗"> <br>
+		名言三:<input id="quote_input3" value="撐過去就是你的了,You are the best!"> <br>
 		<button type="button" id="mybutton" onclick=showopt()>產生名言</button>	<!-- 按了之後要執行showopt() -->
 	</div>
 </div>
@@ -40,38 +40,18 @@
 	<div class="wrap  fadeInUp">
 		<div class="content-left">
 			<blockquote>
-				<h3 id="quote_line1">"數學建模教育之道無它<br>唯數學與榜樣"</h3>
-				<p id="author1"><cite>舒大ㄅ土</cite></p>
+				<h3 id="quote_line1">"努力做好每一件事"</h3>
+				<p id="author1"><cite>上天不會給你過不了的考驗</cite></p>
 			</blockquote>
 			<blockquote>
-				<h3 id="quote_line2">"Mathematical Modeling is nothing<br>but Mathematics and Model!"</h3>
-				<p id="author2"><cite>me</cite></p>				
+				<h3 id="quote_line2">"撐過去就是你的了"</h3>
+				<p id="author2"><cite>You are the best!</cite></p>				
 			</blockquote>
 		</div>
 	</div>
 </div>
 </section>
-<!-- 改成一頁囉 :D
-<section class="bg-black aligncenter" id="section_output">
-<div id="sec2">
-	<span id="teacher" class="background-right-bottom" style="background-image:url('images/ycshu.png'); z-index:5;"></span>
-	<span id="bgimage" class="background light" style="background-image:url('images/road-dawn-mountains-sky.jpeg');"></span>
-	
-	<div class="wrap  fadeInUp">
-		<div class="content-left">
-			<blockquote>
-				<h3 id="quote_line1">"數學建模教育之道無它<br>唯數學與榜樣"</h3>
-				<p id="author1"><cite>舒大ㄅ土</cite></p>
-			</blockquote>
-			<blockquote>
-				<h3 id="quote_line2">"Mathematical Modeling is nothing<br>but Mathematics and Model!"</h3>
-				<p id="author2"><cite>me</cite></p>				
-			</blockquote>
-		</div>
-	</div>
-</div>
-</section>
--->
+
         </article>
         <!-- end article -->
     </main>
@@ -102,11 +82,11 @@ function showopt() {
 	
 	var teacher_no = document.getElementById("myselect").value;
 	if(teacher_no == 1) {
-		document.getElementById("teacher").style = "background-image:url('images/ycshu.png'); z-index:5;";
+		document.getElementById("teacher").style = "background-image:url('images/Bii.png'); z-index:5;";
 	} else if (teacher_no == 2) {
-		document.getElementById("teacher").style = "background-image:url('images/ccliu.png'); z-index:5;";
+		document.getElementById("teacher").style = "background-image:url('images/麻吉兔.png'); z-index:5;";
 	} else if (teacher_no == 3) {
-		document.getElementById("teacher").style = "background-image:url('images/andylee.png'); z-index:5;";
+		document.getElementById("teacher").style = "background-image:url('images/史迪奇.png'); z-index:5;";
 	}
 	
 	var y = document.getElementsByName("option");
@@ -114,28 +94,17 @@ function showopt() {
 		if(y[i].checked) {
 			document.getElementById("author2").innerHTML = "<cite>" + x[1] + "</cite>";
 			if(i==1) {
-				document.getElementById("bgimage").style = "background-image:url('images/road-2.jpg');";
+				document.getElementById("bgimage").style = "background-image:url('images/ncku.jpg');";
 			} else if(i==2) {
-				document.getElementById("bgimage").style = "background-image:url('images/road-3.jpg');";
+				document.getElementById("bgimage").style = "background-image:url('images/concert.jpg');";
 			} else {
-				document.getElementById("bgimage").style = "background-image:url('images/road-dawn-mountains-sky.jpeg');";
+				document.getElementById("bgimage").style = "background-image:url('images/beach.jpg');";
 			}
 		}
 	}
 	$( "#sec1" ).hide();
 	$( "#sec2" ).show();
-	/*
-	//老師準備要產生圖檔用的 XD
-	html2canvas(document.body, {
-		onrendered: function(canvas) {
-		var myImage = canvas.toDataURL("image/png");
-            window.open(myImage);
-		//y = document.getElementById("section-3");
-		//y.appendChild(canvas);
-		//document.body.appendChild(canvas);
-		}
-	});
-	*/
+	
 	
 }
 </script>
